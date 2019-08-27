@@ -14,6 +14,10 @@ for d in data:
 	if len(d) < 100:
 		new.append(d)
 
+good = [d for d in data if 'good' in d]
+bad = ['bad' in d for d in data]
+
 print('档案读取完了，总共有', len(data), '笔资料')
 print('留言平均长度为', sum_len / len(data))
 print('一共有', len(new), '笔留言长度小于100')
+print('一共有', len(good), '笔留言提到了good')
